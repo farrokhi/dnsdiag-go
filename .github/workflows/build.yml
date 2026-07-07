@@ -19,10 +19,10 @@ jobs:
     - name: Set up Go
       uses: actions/setup-go@v6
       with:
-        go-version: '1.24'
+        go-version: '1.26.4'
 
     - name: Build
-      run: go build -v ./...
+      run: go build -v -o /dev/null ./...
 
     - name: Test
       run: go test -v ./...
